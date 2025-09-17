@@ -8,11 +8,10 @@ body {
   justify-content: flex-start; /* doleva */
 }
 
-.center {
-  display: flex;
-  flex-direction: column; /* prvky jdou pod sebe */
-  align-items: center;    /* zarovnání na střed */
-  line-height: 0.5;
+h1 {
+  text-align: center;
+  font-size: 100px;
+  
 }
 
 .right {
