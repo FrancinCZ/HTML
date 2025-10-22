@@ -1,0 +1,145 @@
+/*Navigační bar*/
+ul {
+    list-style-type: none;   
+    margin: 0;
+    padding: 0;
+    background-color: #333;  
+    display: flex;          
+    justify-content: center;
+    text-justify: auto;
+}
+  
+ul li {
+    margin: 0;
+}
+  
+ul li a {
+    display: block;          
+    color: white;           
+    text-align: center;
+    padding: 14px 20px;      
+    text-decoration: none;   
+    transition: background 0.3s;
+}
+  
+ul li a:hover {
+    background-color: #575757; 
+}
+
+.navigace {
+    text-justify: auto;
+}
+
+p1 {
+    font-size: 1.7rem;
+    text-justify: auto;
+}
+
+/*Písmo*/
+body {
+    font-family: Optima, sans-serif;
+    margin: 0;
+    background-color: #DBD3BB;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.4rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem
+}
+/* ----------------------------- */
+/*         Slideshow CSS         */
+/* ----------------------------- */
+
+.auto-slider {
+    width: 90%;
+    max-width: 900px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    position: relative;
+    margin: 40px auto;
+}
+
+.track {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 10s linear infinite;
+}
+
+.slide {
+    flex: 1 0 100%;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    color: #fff;
+   
+
+    /* Klíčové pro centrování obrázků */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain; /* nebo cover podle preference */
+    background-origin: content-box;
+    background-clip: content-box;
+    background-size: cover;
+
+    /* Volitelné orámování pro test */
+    /* outline: 1px solid lime; */
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+    object-fit: contain; /* nebo 'cover', podle potřeb */
+}
+
+.slide:nth-child(1) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/IRLUKA_KROSANDRA_%281%29.jpg/1920px-IRLUKA_KROSANDRA_%281%29.jpg");
+}
+.slide:nth-child(2) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/24/Cornwall_Coast.jpg");
+}
+.slide:nth-child(3) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/99/Blue_Mountains_National_Park%2C_Australia.jpg");
+}
+.slide:nth-child(4) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/58/Sonnenuntergang_am_Meer.jpg");
+}
+
+/* Klíčové snímky animace */
+@keyframes slide {
+    0%   { transform: translateX(0%); }
+    20%  { transform: translateX(0%); }
+    25%  { transform: translateX(-100%); }
+    45%  { transform: translateX(-100%); }
+    50%  { transform: translateX(-200%); }
+    70%  { transform: translateX(-200%); }
+    75%  { transform: translateX(-300%); }
+    95%  { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
+/* Pauza při hoveru */
+.auto-slider:hover .track {
+    animation-play-state: paused;
+}
+
+/* Pro uživatele, kteří nechtějí animace */
+@media (prefers-reduced-motion: reduce) {
+    .track {
+        animation: none;
+    }
+}
